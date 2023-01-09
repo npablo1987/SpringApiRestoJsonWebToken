@@ -26,6 +26,8 @@ public class WebSecurityConfig {
                 .anyRequest()
                 .authenticated()
                 .and()
+                .httpBasic()
+                .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
